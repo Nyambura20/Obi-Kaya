@@ -1,16 +1,42 @@
 #!/bin/bash
 
-
 set -e  # Exit on any error
 
 echo "🚀 Starting SalesGenius AI Deployment to Google Cloud Run"
 echo "=================================================="
 
-# Configuration
+# Check if .env file exists and load it FIRST
+if [ ! -f .env ]; then
+    echo "⚠️  Warning: .env file not found. Creating from .env.example..."
+    if [ -f .env.example ]; then
+        cp .env.example .env
+        echo "✅ Created .env file. Please edit it with your API keys before deploying."
+        exit 1
+    else
+        echo "❌ Error: Neither .env nor .env.example found!"
+        exit 1
+    fi
+fi
+
+# Load environment variables from .env file
+echo "📄 Loading configuration from .env file..."
+export $(grep -v '^#' .env | xargs)
+
+# Configuration (now reading from loaded env vars)
 PROJECT_ID="${GCP_PROJECT_ID:-your-gcp-project-id}"
 REGION="${GCP_REGION:-us-central1}"
 SERVICE_NAME="salesgenius-ai-agent"
 IMAGE_NAME="gcr.io/${PROJECT_ID}/${SERVICE_NAME}"
+
+# Validate project ID
+if [ "$PROJECT_ID" = "your-gcp-project-id" ]; then
+    echo "❌ Error: GCP_PROJECT_ID not set in .env file"
+    echo "Please edit .env and set GCP_PROJECT_ID to your actual Google Cloud project ID"
+    exit 1
+fi
+
+echo "📋 Using project: ${PROJECT_ID}"
+echo "📍 Using region: ${REGION}"
 
 # Check if gcloud is installed
 if ! command -v gcloud &> /dev/null; then
@@ -27,7 +53,7 @@ if ! gcloud auth list --filter=status:ACTIVE --format="value(account)" | grep -q
 fi
 
 # Set the project
-echo "📋 Setting GCP project to: ${PROJECT_ID}"
+echo "� Setting gcloud to use project: ${PROJECT_ID}"
 gcloud config set project ${PROJECT_ID}
 
 # Enable required APIs
@@ -37,22 +63,6 @@ gcloud services enable \
     run.googleapis.com \
     containerregistry.googleapis.com \
     aiplatform.googleapis.com
-
-# Check if .env file exists
-if [ ! -f .env ]; then
-    echo "⚠️  Warning: .env file not found. Creating from .env.example..."
-    if [ -f .env.example ]; then
-        cp .env.example .env
-        echo "✅ Created .env file. Please edit it with your API keys before deploying."
-        exit 1
-    else
-        echo "❌ Error: Neither .env nor .env.example found!"
-        exit 1
-    fi
-fi
-
-# Load environment variables
-source .env
 
 # Validate API key
 if [ -z "$GOOGLE_API_KEY" ] || [ "$GOOGLE_API_KEY" = "your_google_api_key_here" ]; then
