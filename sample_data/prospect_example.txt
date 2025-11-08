@@ -1,0 +1,43 @@
+# Sample Prospect Data for Sales Proposal Generation
+
+Company Name: TechFlow Solutions Inc.
+Industry: Financial Services Technology
+Company Size: 250 employees
+Annual Revenue: $45M
+
+## Current Challenges:
+1. Manual data entry processes taking 15+ hours per week per employee
+2. Error rate of 12% in transaction processing
+3. No integration between CRM and accounting systems
+4. Customer onboarding takes 3-4 weeks (industry average is 1 week)
+5. Unable to scale operations without hiring more staff
+
+## Requirements:
+- Automated workflow system
+- Integration with Salesforce and QuickBooks
+- AI-powered data validation
+- Real-time reporting dashboard
+- Mobile app for field team
+- Must be deployed within Q1 2025
+
+## Decision Makers:
+- Sarah Chen - CFO (Economic Buyer)
+- Michael Rodriguez - VP of Operations (Champion)
+- IT Team (Technical Evaluation)
+
+## Budget Signals:
+- Currently spending $180K/year on manual processes
+- Board approved $200K for automation initiative
+- Looking for ROI within 12 months
+
+## Competition:
+- Evaluating: Salesforce Platform, Microsoft Power Automate
+- Concerns: Complexity, implementation time, total cost
+
+## Discovery Call Notes:
+- Pain point is URGENT - losing deals due to slow onboarding
+- Michael (champion) loves AI features
+- Sarah (CFO) needs clear ROI story
+- Lost a $2M client last month due to processing errors
+- Team is burned out from manual work
+- Willing to pay premium for fast implementation

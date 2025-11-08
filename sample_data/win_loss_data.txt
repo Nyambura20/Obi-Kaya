@@ -1,0 +1,101 @@
+# Sample Win/Loss Data for Analysis
+
+## WON DEALS (Last 12 Months)
+
+### Deal 1 - Acme Corp
+- Deal Size: $150K
+- Industry: Healthcare
+- Timeline: 45 days
+- Competitor: Salesforce
+- Win Reason: Better customer support, faster implementation
+- Champion: CTO
+
+### Deal 2 - Global Finance Ltd
+- Deal Size: $220K
+- Industry: Financial Services
+- Timeline: 60 days
+- Competitor: Microsoft
+- Win Reason: Superior AI features, better ROI
+- Champion: VP Operations
+
+### Deal 3 - RetailMax Inc
+- Deal Size: $95K
+- Industry: Retail
+- Timeline: 30 days
+- Competitor: HubSpot
+- Win Reason: Industry-specific features, competitive pricing
+- Champion: Marketing Director
+
+### Deal 4 - MedTech Solutions
+- Deal Size: $180K
+- Industry: Healthcare
+- Timeline: 90 days
+- Competitor: None (no competition)
+- Win Reason: Unique features, strong reference customer
+- Champion: CEO
+
+### Deal 5 - DataCorp Analytics
+- Deal Size: $310K
+- Industry: Technology
+- Timeline: 75 days
+- Competitor: Salesforce, Microsoft
+- Win Reason: Custom integrations, executive relationships
+- Champion: CIO
+
+## LOST DEALS (Last 12 Months)
+
+### Deal 1 - EnterpriseOne
+- Deal Size: $450K
+- Industry: Manufacturing
+- Timeline: 120 days (lost at final stage)
+- Lost To: Salesforce
+- Loss Reason: "Need enterprise-grade brand name", pricing concerns
+- No Champion
+
+### Deal 2 - StartupHub
+- Deal Size: $45K
+- Industry: Technology
+- Timeline: 20 days
+- Lost To: HubSpot
+- Loss Reason: Price too high for their budget
+- Champion: Marketing Manager (weak)
+
+### Deal 3 - Regional Bank Corp
+- Deal Size: $280K
+- Industry: Financial Services
+- Timeline: 150 days (stalled then lost)
+- Lost To: Microsoft
+- Loss Reason: IT preferred Microsoft ecosystem integration
+- Champion: Left company during process
+
+### Deal 4 - ConsultCo Partners
+- Deal Size: $120K
+- Industry: Professional Services
+- Timeline: 45 days
+- Lost To: Salesforce
+- Loss Reason: Existing Salesforce relationship, switching costs too high
+- Champion: Operations Director (not senior enough)
+
+### Deal 5 - HealthNet Systems
+- Deal Size: $195K
+- Industry: Healthcare
+- Timeline: 90 days
+- Lost To: Custom Build (internal dev team)
+- Loss Reason: Wanted full control, had dev resources
+- No Champion
+
+### Deal 6 - FastGrowth Inc
+- Deal Size: $85K
+- Industry: E-commerce
+- Timeline: 60 days
+- Lost To: Microsoft Power Automate
+- Loss Reason: "Cheaper option", not convinced of ROI difference
+- Champion: Weak (junior manager)
+
+## KEY METRICS SUMMARY
+- Overall Win Rate: 45% (5 won, 6 lost)
+- Average Won Deal Size: $191K
+- Average Lost Deal Size: $196K
+- Average Sales Cycle (Won): 60 days
+- Average Sales Cycle (Lost): 81 days
+- Main Competitor: Salesforce (3 losses, 2 wins against)
